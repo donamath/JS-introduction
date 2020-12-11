@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function myFunction() {
+		  document.getElementById("myHead").innerHTML = "The function is invoked (called) when a button is clicked:";
+		}
+	</script>
+</head>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+<h2>What Can JavaScript Do?</h2>
+<p>JavaScript can change HTML attribute values.</p>
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+<button onclick="document.getElementById('myImage').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhGHgiv4JkXVUqtRtFikja_HdPfp29AF2B3Q&usqp=CAU'">Turn on the light</button>
+<img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIRmpC2V_Lc4A5M_9Qnp7Fx-HHpyX0dr06A&usqp=CAU" style="width:100px">
+<button onclick="document.getElementById('myImage').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIRmpC2V_Lc4A5M_9Qnp7Fx-HHpyX0dr06A&usqp=CAU'">Turn off the light</button>
+
+<h2>What Can JavaScript Do?</h2>
+<p id="myStyle">JavaScript can change the style of an HTML element.</p>
+<button type="button" onclick="document.getElementById('myStyle').style.color='red'">Click Me!</button>
+
+<h2>What Can JavaScript Do?</h2>
+<p id="hide">JavaScript can hide HTML elements.</p>
+<button type="button" onclick="document.getElementById('hide').style.display='none'">Click Me!</button>
+
+<h2>What Can JavaScript Do?</h2>
+<p>JavaScript can show hidden HTML elements.</p>
+<p id="show" style="display:none">Hello JavaScript!</p>
+<button type="button" onclick="document.getElementById('show').style.display='block'">Click Me!</button>
+
+<h1>A Web Page</h1>
+<p id="myHead"> a JavaScript function is placed in the head section of an HTML page.</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+
+<h2>JavaScript Alert</h2>
+<button onclick="myAlert()">5+10</button>
+
+<h2>JavaScript Confirm Box</h2>
+<button onclick="myConfirm()">Try it</button>
+<p id="conBox">here comes</p>
+
+<h2>JavaScript Prompt</h2>
+<button onclick="myPrompt()">Try it</button>
+<p id="proBox">here comes the result</p>
+
+
+<script>
+function myAlert() {
+  var x=5,e="5+10=";
+  var y=10;
+  var z=x+y;
+  alert(e+z+"\nWoww");
+}
+
+function myConfirm() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("conBox").innerHTML = txt;
+}
+
+function myPrompt() {
+  var txt;
+  var person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  } else {
+    txt = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("proBox").innerHTML = txt;
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
